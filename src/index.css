@@ -8,9 +8,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("src/assets/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 
 h1 {
@@ -37,3 +37,26 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
+/* Tablet */
+
+@media only screen and (min-width:480px) and (max-width:899px) {
+
+  body {
+    background-position: center;
+  }
+
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width:900px) {
+
+  body {
+    background-position: center;
+  }
+
+
+ }

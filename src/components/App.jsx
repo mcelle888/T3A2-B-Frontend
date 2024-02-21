@@ -3,14 +3,13 @@ import Rsvp from './Rsvp'
 import Responses from './Responses'
 import Welcome from './Welcome'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import NavBar from './NavBar'
+import './App.css'
 
 function App() {
   return (
     <>
 
     <BrowserRouter>
-        
       <Routes>
           <Route path = '/' element = {<Welcome />} />
           <Route path = '/home' element ={<Home />} />

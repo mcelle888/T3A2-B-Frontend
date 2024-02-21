@@ -1,0 +1,25 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+body {
+    display: flex;
+    text-align: center;
+    background-image: url("../../src/assets/bg.jpg");
+    min-width: 100vw;
+    min-height:100vh;
+    background-size :cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h2 {
+    margin-bottom: 5rem; 
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+
