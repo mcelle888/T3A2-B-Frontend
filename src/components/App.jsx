@@ -6,8 +6,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Details from './Details'
 import Aboutus from './AboutUs'
+import { useEffect, useState } from 'react'
 
 function App() {
+
   return (
     <>
 

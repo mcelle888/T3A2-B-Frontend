@@ -21,7 +21,6 @@ const Rsvp = () => {
     no: false
   });
 
-  const [responses, setResponses] = useState([]); // Initialize responses as an empty array
 
   const changeHandler = e => {
     const { name, value, checked } = e.target;
@@ -43,10 +42,9 @@ const Rsvp = () => {
     }
   };
 
-  const sendResponse = e => {
+  const sendResponse = async (e) => {
     e.preventDefault();
-    // create response object from user input
-    const response = {
+    const responseData = {
       name: allValues.fullname,
       number: allValues.phone,
       email: allValues.email,
@@ -56,10 +54,36 @@ const Rsvp = () => {
       dietry: allValues.diet,
       message: allValues.message,
     };
+  
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(responseData),
+      };
+      const response = await fetch('http://localhost:8001/rsvp', requestOptions);
+      if (!response.ok) {
+        throw new Error('Failed to add response');
+      }
+      
+      // Clear form and thank you
+      setAllValues({
+        fullname: '',
+        phone: '',
+        email: '',
+        diet: '',
+        guest: '',
+        message: ''
+      });
+      setCeremonyOptions({ yes: false, no: false });
+      setReceptionOptions({ yes: false, no: false });
+  
 
-    setResponses(prevResponses => [...prevResponses, response]);
-
-
+      alert('Thank you for your response!');
+  
+    } catch (error) {
+      console.error('Error adding response:', error);
+    }
   };
 
   return (
@@ -144,9 +168,6 @@ const Rsvp = () => {
         <div className="field is-grouped">
           <div className="control">
             <button className="button is-link">Submit</button>
-          </div>
-          <div className="control">
-            <button className="button is-link is-light">Cancel</button>
           </div>
         </div>
       </form>
