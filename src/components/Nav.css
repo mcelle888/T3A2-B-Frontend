@@ -1,0 +1,21 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+nav > .navbar-menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+    background-color: rgba(45, 77, 85, 0.8);
+}
+
+nav > .navbar-menu > .navbar-end > .navbar-item {
+    color:white; 
+}
+
+nav > .navbar-menu > .navbar-end {
+    display:flex;
+
+}
+
