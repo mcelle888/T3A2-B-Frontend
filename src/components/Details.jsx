@@ -3,13 +3,13 @@ import NavBar from './NavBar'
 
 const Details = () => {
   return (
+    
     <>
     <NavBar />
     <body>
       
     </body>
   
-
   </>
   )
 }

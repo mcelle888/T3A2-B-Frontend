@@ -14,6 +14,10 @@ nav > .navbar-menu > .navbar-end > .navbar-item {
     color:white; 
 }
 
+nav > .navbar-menu > .navbar-end > .navbar-item:hover {
+    background-color: rgba(80, 91, 94, 0.8);
+}
+
 nav > .navbar-menu > .navbar-end {
     display:flex;
 
