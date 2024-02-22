@@ -1,44 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 function Login() {
-  const [pincode, setPincode] = useState('')
-  const [errorMessage, setErrorMessage] = useState('')
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:8001/')
-        if (response.ok) {
-          console.log('Data fetched successfully')
-        } else {
-          throw new Error('Failed to fetch data')
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error)
-        setErrorMessage('Failed to fetch data')
-      }
-    }
-
-    fetchData()
-    return () => {
-      setErrorMessage('')
-    }
-  }, []) 
+  const [pincode, setPincode] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('/', { pincode })
+      const response = await axios.post('http://localhost:8001/', { pincode });
+      
       if (response.status === 200) {
-        const { token } = response.data
-        localStorage.setItem('token', token)
-        window.location.href = '/home'
+        const { token } = response.data;
+        localStorage.setItem('token', token);
+        
+        // Redirect to the "/home" page after successful login
+        window.location.href = '/home';
       }
     } catch (error) {
-      console.error('Error logging in:', error)
-      setErrorMessage('Invalid pincode')
+      console.error('Error logging in:', error);
+      setErrorMessage('Invalid pincode');
     }
-  }
+  };
 
   return (
     <>
@@ -53,7 +35,7 @@ function Login() {
       <button onClick={handleLogin}>Login</button>
       {errorMessage && <p>{errorMessage}</p>}
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;
