@@ -4,7 +4,7 @@ const Responses = () => {
   const [responses, setResponses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8001/rsvp')
+    fetch('http://localhost:8001/responses')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch data from server');
