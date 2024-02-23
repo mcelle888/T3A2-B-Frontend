@@ -49,27 +49,27 @@ const Rsvp = () => {
   }
 
   const validateForm = () => {
-    let errors = {};
-    let isValid = true;
+    let errors = {}
+    let isValid = true
 
     if (!allValues.fullname.trim()) {
-      errors.fullname = 'Full Name is required';
-      isValid = false;
+      errors.fullname = 'Full Name is required'
+      isValid = false
     }
 
     if (!allValues.email.trim()) {
-      errors.email = 'Email is required';
-      isValid = false;
+      errors.email = 'Email is required'
+      isValid = false
     }
 
     if (!allValues.phone.trim()) {
-      errors.phone = 'Phone Number is required';
-      isValid = false;
+      errors.phone = 'Phone Number is required'
+      isValid = false
     }
 
-    setErrors(errors);
-    return isValid;
-  };
+    setErrors(errors)
+    return isValid
+  }
 
   const sendResponse = async (e) => {
     e.preventDefault()
@@ -80,7 +80,7 @@ const Rsvp = () => {
     }
 
     if (!validateForm()) {
-      return;
+      return
     }
   
     const responseData = {
@@ -197,9 +197,9 @@ const Rsvp = () => {
 
             <div className="field">
               <label className="label">Guests</label>
-              <div className="control">
+                <div className="control">
                 <textarea className="textarea" name="guest" value={allValues.guest} onChange={changeHandler} placeholder="Enter the names of your guests"></textarea>
-              </div>
+                </div>
             </div>
 
             <div className="field">
@@ -216,7 +216,6 @@ const Rsvp = () => {
             </div>
             <h2>Need to update your RSVP?</h2>
             <button className="button is-link" onClick={handleUpdateClick}>Update</button>
-
           </form>
         ) : (
           <ThankYou responseId={responseId} />
