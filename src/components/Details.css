@@ -1,0 +1,42 @@
+/* NavBar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    z-index: 999; 
+  }
+  
+  .details-container {
+    margin-top: 70px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+  
+  .bubble {
+    background-color: #f7d9e1; 
+    border-radius: 15px;
+    padding: 30px; 
+    width: 30rem; 
+    max-width: 30rem; 
+    margin: 20px; 
+    box-sizing: border-box; 
+  }
+  
+  /* Styling for headings */
+  .details-heading {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #d86aa1; 
+    border: 2px solid #fff; 
+    padding: 10px; 
+    border-radius: 10px; 
+    background-color: #fff; 
+  }
+  
