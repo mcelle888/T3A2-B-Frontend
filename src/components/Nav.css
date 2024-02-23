@@ -7,7 +7,7 @@ nav > .navbar-menu{
     justify-content: space-around;
     align-items: center; 
     width: 100%;
-    background-color: rgba(45, 77, 85, 0.8);
+    background-color: rgba(45, 77, 85, 0.4);
 }
 
 nav > .navbar-menu > .navbar-end > .navbar-item {
@@ -15,7 +15,7 @@ nav > .navbar-menu > .navbar-end > .navbar-item {
 }
 
 nav > .navbar-menu > .navbar-end > .navbar-item:hover {
-    background-color: rgba(80, 91, 94, 0.8);
+    background-color: rgba(129, 149, 153, 0.8);
 }
 
 nav > .navbar-menu > .navbar-end {
