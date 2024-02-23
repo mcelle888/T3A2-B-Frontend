@@ -7,7 +7,6 @@ const Details = () => {
     <>
     <NavBar />
     <body>
-      
     </body>
   
   </>
