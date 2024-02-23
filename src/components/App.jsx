@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Rsvp from './Rsvp'
 import Responses from './Responses'
 import Welcome from './Welcome'
 import Details from './Details'
 import Aboutus from './AboutUs'
+import Update from './Update'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -38,6 +39,7 @@ function App() {
               <Route path="/details" element={<Details />} />
               <Route path="/aboutus" element={<Aboutus />} />
               <Route path="/responses" element={<Responses />} />
+              <Route path="/update" element={<Update />} />
             </>
           ) : (
             <Route path="*" element={<UnauthorizedError />} /> // Render UnauthorizedError component if not authenticated

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavBar from './NavBar';
 
 const Responses = () => {
   const [responses, setResponses] = useState([]);
@@ -30,6 +31,8 @@ const Responses = () => {
 
   return (
     <>
+      <NavBar />
+      <body>
       <h1>Responses</h1>
       <table className="table">
         <thead>
@@ -60,6 +63,7 @@ const Responses = () => {
           ))}
         </tbody>
       </table>
+      </body>
     </>
   );
 };
