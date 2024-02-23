@@ -4,7 +4,16 @@ const Responses = () => {
   const [responses, setResponses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8001/rsvp')
+    const token = localStorage.getItem('token');
+    if (!token) {
+      console.error('Token is missing');
+      return;
+    }
+    fetch('http://localhost:8001/responses', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch data from server');
@@ -17,7 +26,7 @@ const Responses = () => {
       .catch(error => {
         console.error('Error fetching data from server:', error);
       });
-  }, []); // 
+  }, []);
 
   return (
     <>

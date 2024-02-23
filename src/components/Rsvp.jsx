@@ -44,6 +44,13 @@ const Rsvp = () => {
 
   const sendResponse = async (e) => {
     e.preventDefault();
+    const token = localStorage.getItem('token');
+    if (!token) {
+      console.error('Token is missing');
+      // Handle missing token error
+      return;
+    }
+  
     const responseData = {
       name: allValues.fullname,
       number: allValues.phone,
@@ -58,7 +65,10 @@ const Rsvp = () => {
     try {
       const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Include JWT token in the headers
+        },
         body: JSON.stringify(responseData),
       };
       const response = await fetch('http://localhost:8001/rsvp', requestOptions);
@@ -78,13 +88,13 @@ const Rsvp = () => {
       setCeremonyOptions({ yes: false, no: false });
       setReceptionOptions({ yes: false, no: false });
   
-
       alert('Thank you for your response!');
   
     } catch (error) {
       console.error('Error adding response:', error);
     }
   };
+  
 
   return (
     <>
