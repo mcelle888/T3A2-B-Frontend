@@ -6,6 +6,7 @@ const Details = () => {
   return (
     <>
       <NavBar />
+      <body>
       <div className="background-image"></div> 
       <div className="details-container">
         <div className="left-bubble">
@@ -27,6 +28,7 @@ const Details = () => {
           </div>
         </div>
       </div>
+      </body>
     </>
   );
 };

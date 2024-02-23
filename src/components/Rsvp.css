@@ -1,0 +1,20 @@
+#update {
+    padding: 1rem;
+    color: black;
+}
+
+.section {
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.cr {
+   margin: 0.1rem;
+}
+
+#heading {
+    margin: 1rem;
+}
+
+.checkbox {
+    margin: 0.5rem;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NavBar from './NavBar'
 import ThankYou from './Thankyou'
+import './Rsvp.css'
 
 const Rsvp = () => {
   const [allValues, setAllValues] = useState({
@@ -137,11 +138,11 @@ const Rsvp = () => {
     <>
       <NavBar />
       <body>
-        <h1>RSVP</h1>
+        <h1 id='heading'>RSVP</h1>
         {!submitted ? (
           <form className="section" onSubmit={sendResponse}>
             <div className="control">
-              <h2>Ceremony</h2>
+              <h2 className = "cr">Ceremony</h2>
               <label className="checkbox">
                 <input type="checkbox" name="ceremony" value="yes" onChange={changeHandler} checked={ceremonyOptions.yes} />
                 Yes
@@ -153,7 +154,7 @@ const Rsvp = () => {
             </div>
 
             <div className="control">
-              <h2>Reception</h2>
+              <h2 className = "cr">Reception</h2>
               <label className="checkbox">
                 <input type="checkbox" name="reception" value="yes" onChange={changeHandler} checked={receptionOptions.yes} />
                 Yes
@@ -198,14 +199,14 @@ const Rsvp = () => {
             <div className="field">
               <label className="label">Guests</label>
                 <div className="control">
-                <textarea className="textarea" name="guest" value={allValues.guest} onChange={changeHandler} placeholder="Enter the names of your guests"></textarea>
+                <textarea className="textarea" name="guest" value={allValues.guest} onChange={changeHandler} placeholder="Enter the names of any guests and any dietry requirements"></textarea>
                 </div>
             </div>
 
             <div className="field">
               <label className="label">Message</label>
               <div className="control">
-                <textarea className="textarea" name="message" value={allValues.message} onChange={changeHandler} placeholder="Leave a message"></textarea>
+                <textarea className="textarea" name="message" value={allValues.message} onChange={changeHandler} placeholder="Leave a message or if you have a question, we'll email you back ASAP!"></textarea>
               </div>
             </div>
 
@@ -214,7 +215,7 @@ const Rsvp = () => {
                 <button className="button is-link">Submit</button>
               </div>
             </div>
-            <h2>Need to update your RSVP?</h2>
+            <h2 id = "update">Need to update your RSVP?</h2>
             <button className="button is-link" onClick={handleUpdateClick}>Update</button>
           </form>
         ) : (
