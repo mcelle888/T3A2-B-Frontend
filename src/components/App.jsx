@@ -7,7 +7,6 @@ import Welcome from './Welcome'
 import Details from './Details'
 import Aboutus from './AboutUs'
 import Update from './Update'
-import ThankYou from './Thankyou'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -41,7 +40,6 @@ function App() {
               <Route path="/aboutus" element={<Aboutus />} />
               <Route path="/responses" element={<Responses />} />
               <Route path="/update" element={<Update />} />
-              <Route path="/thankyou" element={<ThankYou />} />
             </>
           ) : (
             <Route path="*" element={<UnauthorizedError />} /> // Render UnauthorizedError component if not authenticated
