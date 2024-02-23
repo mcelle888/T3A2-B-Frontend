@@ -1,12 +1,13 @@
 import React from 'react'
 import NavBar from './NavBar'
+import timeline from '../assets/timeline2.png'
 
 const AboutUs = () => {
   return (
     <>
     <NavBar />
     <body>
-      <h1>About Us</h1>
+      <img src={ timeline } alt="timeline" />
     </body>
   
 
