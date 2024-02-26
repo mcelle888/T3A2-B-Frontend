@@ -1,0 +1,22 @@
+#timeline {
+    margin: 2rem; 
+    width: 80vw;
+}
+
+@media only screen and (min-width:480px) and (max-width:899px) {
+
+    #timeline {
+        width: 20rem;
+        height: auto;
+    }
+}
+    
+  
+  /* Desktop  */
+  @media only screen and (min-width:900px) {
+  
+    #timeline {
+        width: 30rem;
+        height: auto;
+    }
+}

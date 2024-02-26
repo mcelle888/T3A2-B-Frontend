@@ -18,13 +18,14 @@ function App() {
     }
   }, [])
 
-  // UnauthorizedError component
   const UnauthorizedError = () => (
     <div>
       <h1>401 Unauthorized</h1>
       <p>Please log in first with the provided pincode.</p>
       <button onClick={() => { window.location.href = '/' }}>Login</button>
     </div>
+
+  
   )
 
   return (
