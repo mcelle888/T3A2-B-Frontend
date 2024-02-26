@@ -24,8 +24,6 @@ function App() {
       <p>Please log in first with the provided pincode.</p>
       <button onClick={() => { window.location.href = '/' }}>Login</button>
     </div>
-
-  
   )
 
   return (

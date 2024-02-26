@@ -30,9 +30,11 @@ div.inputs {
 }
 
 #thankyou {
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255, 0.6);
     margin: 1rem; 
     color: black; 
+    padding: 1rem;
+    border-radius: 15px;
 }
 
 label {
@@ -41,5 +43,6 @@ label {
 
 #error-message {
     background-color: rgb(223, 187, 187, 0.8);
-
+    border-radius: 5px;
+    padding: 1rem;
 }

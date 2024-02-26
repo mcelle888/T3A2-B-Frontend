@@ -11,7 +11,7 @@ const Details = () => {
         <div className="background-image"></div>
         <div className="details-container">
           <div className="left-bubble">
-            <h2 className="details-heading">When and Where</h2>
+            <h2 className="details-heading">When + Where</h2>
             <div className="bubble">
               <p>Date: 08.09.2024</p>
               <p>Time: 4.00pm</p>

@@ -12,5 +12,6 @@ body {
 }
 
 #names {
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0, 0.6); 
 }

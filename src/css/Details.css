@@ -14,34 +14,33 @@
   
   .bubble {
 
-    background-color: rgb(255, 255, 255, 0.4); 
+    background-color: rgb(255, 255, 255, 0.6); 
     border-radius: 15px;
     padding: 30px; 
     width: 15rem; 
     max-width: 30rem; 
     margin: 10rem; 
     box-sizing: border-box; 
-    color: black;
+    color: rgb(0, 0, 0, 0.8);
     margin: 2rem; 
   }
   
 
   .details-heading {
-    font-size: 1.5em; 
-    font-weight: bold; 
-    color: white;
+    font-size: 2em; 
+    font-weight: bold;  
     padding: 10px; 
     border-radius: 10px; 
     width: 15rem; 
     margin-left: 2rem;
+    color: rgb(0, 0, 0, 0.4);
   }
 
-
-  
   #address {
     background-color:white;
     margin: 4rem; 
   }
+
 
   @media only screen and (min-width:480px) and (max-width:899px) {
 
@@ -49,8 +48,10 @@
         width: 80vw;
     }
 
-    .details-heading {
+    .details-heading{
       width: 30rem; 
+      font-size: 2em;
+      color: rgb(0, 0, 0, 0.5);
     }
   }
 
@@ -60,10 +61,14 @@
 
     .bubble {
         width: 30vw;
+        background-color: rgb(255, 255, 255, 0.4); 
+        height: 40vh
     }
 
     .details-heading {
       width: 26vw; 
-    }
+      font-size: 2em;
+      color: rgb(0, 0, 0, 0.5);
 
+    }
 }
