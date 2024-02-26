@@ -26,6 +26,11 @@
   border: 1px solid #ddd;
 }
 
+#warning {
+  padding: 2rem; 
+  border-radius: 5px;
+}
+
 
 /* Tablet */
 

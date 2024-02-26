@@ -96,6 +96,7 @@ const Update = () => {
       <NavBar />
       <body>
       <div>
+        <h1>Update RSVP</h1>
         <form className='enter' onSubmit={handleSubmit}>
           <label>Response Number:</label>
           <input type="text" name="responseNumber" value={responseId} onChange={handleChange} />

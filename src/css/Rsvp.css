@@ -35,6 +35,10 @@
     margin-top: 5px;
   }
 
+  #date {
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+  }
 
 /* Tablet */
 
