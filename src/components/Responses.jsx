@@ -24,7 +24,7 @@ const Responses = () => {
       setAccessDenied(true)
       return
     }
-    fetch('http://localhost:8001/responses', {
+    fetch('https://t3a2-b-backend-2u06.onrender.com/responses', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -124,7 +124,7 @@ const Rsvp = () => {
         body: JSON.stringify(responseData),
       }
       // Send POST request
-      const response = await fetch('http://localhost:8001/rsvp', requestOptions)
+      const response = await fetch('https://t3a2-b-backend-2u06.onrender.com/rsvp', requestOptions)
       // Check if request was successful
       if (!response.ok) {
         // Handles unauthorised responses
