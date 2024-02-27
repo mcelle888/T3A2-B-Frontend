@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Home'
-import Rsvp from './Rsvp'
-import Responses from './Responses'
-import Welcome from './Welcome'
-import Details from './Details'
-import Aboutus from './AboutUs'
-import Update from './Update'
+import Home from './components/Home'
+import Rsvp from './components/Rsvp'
+import Responses from './components/Responses'
+import Welcome from './components/Welcome'
+import Details from './components/Details'
+import Aboutus from './components/AboutUs'
+import Update from './components/Update'
 
 // Main App function is defined and authentication status management. Checks if user is authenticated on render
 function App() {
