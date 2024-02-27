@@ -1,0 +1,56 @@
+nav > .navbar-menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+    background-color: rgb(194, 146, 137, 0.8);
+    height: 4rem;
+}
+
+nav > .navbar-menu > .navbar-end > .navbar-item {
+    color:white; 
+}
+
+nav > .navbar-menu > .navbar-end > .navbar-item:hover {
+    background-color:rgb(255, 255, 255, 0.15); 
+}
+
+nav > .navbar-menu > .navbar-end {
+    display:flex;
+
+}
+
+.navbar {
+    position: relative;
+  }
+  
+.navbar-logo {
+    position: absolute; 
+    top: -10; 
+    left: 0; 
+    z-index: 1; 
+    height: auto;
+    width: 10rem;
+    opacity:0.8; 
+    margin-left: 0.1rem;
+  }
+
+
+  @media only screen and (min-width:0px) and (max-width:1023px) {
+
+    .navbar-logo,
+    .navbar-top {
+      display: none;
+    }
+  }
+
+
+@media only screen and (min-width:500px)  {
+
+  nav > .navbar-menu {
+  background-color: rgb(194, 146, 137, 0.7);
+  }
+}
+
+  

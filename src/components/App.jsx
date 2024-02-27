@@ -8,6 +8,7 @@ import Details from './Details'
 import Aboutus from './AboutUs'
 import Update from './Update'
 
+// Main App function is defined and authentication status management. Checks if user is authenticated on render
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
@@ -18,15 +19,16 @@ function App() {
     }
   }, [])
 
-  // UnauthorizedError component
+// Component that renders if token is not found
   const UnauthorizedError = () => (
     <div>
-      <h1>401 Unauthorized</h1>
+      <h1>401: Unauthorized</h1>
       <p>Please log in first with the provided pincode.</p>
       <button onClick={() => { window.location.href = '/' }}>Login</button>
     </div>
   )
 
+  // Main app component with all routes
   return (
     <>
       <BrowserRouter>

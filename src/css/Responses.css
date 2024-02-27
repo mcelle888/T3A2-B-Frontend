@@ -1,0 +1,55 @@
+.response-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .response-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 250, 250, 0.4);
+    color: black;
+  }
+
+
+#top {
+    margin: 2rem;
+}
+
+#total-entries {
+  margin: 1.5rem; 
+  background-color: rgb(255, 255, 255, 0.5); 
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#warning {
+  padding: 2rem; 
+  border-radius: 5px;
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width:480px) and (max-width:899px) {
+
+  .response-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    min-width: 500px; /* Ensures at least 3 columns when space allows */
+  }}
+  
+
+/* Desktop  */
+@media only screen and (min-width:900px) {
+
+  .response-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    min-width: 1000px; /* Ensures at least 3 columns when space allows */
+  }}

@@ -1,0 +1,48 @@
+#form-section {
+    background-color: rgb(255, 255, 255, 0.4);
+    margin:1.5rem;
+    padding: 1rem; 
+}
+
+.enter {
+    margin-top: 4rem; 
+}
+
+.checkbox {
+    margin: 0.5rem;
+}
+
+h2 {
+    font-family: 10rem;  
+}
+
+.ed {
+    margin:2rem; 
+    font-size: 1.5rem;
+}
+
+label {
+    margin: 0.5rem;  
+}
+
+div.inputs {
+    margin: 0.5rem;
+}
+
+#thankyou {
+    background-color: rgb(255, 255, 255, 0.6);
+    margin: 1rem; 
+    color: black; 
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+label {
+    color: black;
+}
+
+#error-message {
+    background-color: rgb(223, 187, 187, 0.8);
+    border-radius: 5px;
+    padding: 1rem;
+}
