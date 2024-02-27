@@ -29,6 +29,13 @@ const Details = () => {
               </ul>
             </div>
           </div>
+          {/* New bubble for gifts */}
+          <div className="gifts-bubble">
+            <h2 className="details-heading">Gifts</h2>
+            <div className="bubble">
+              <p>Your presence on this day is the greatest gift of all &#10084;&#65039; If you would like to give a gift though, a wishing well will be present at the reception!</p>
+            </div>
+          </div>
           <MapComponent />
         </div>
       </body>
