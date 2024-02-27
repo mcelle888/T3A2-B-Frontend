@@ -169,7 +169,7 @@ const Rsvp = () => {
         <h1 id='heading'>RSVP</h1>
         {!submitted ? (
             <form className="section1" onSubmit={sendResponse}>
-              <p id="date">Please complete and submit by 28th July &#x1f56d;</p>
+              <p id="date">Please complete and submit by 28th July &#128276;</p>
             <div className="control">
             <h2 className = "cr">Ceremony</h2>
               <label className="checkbox">
@@ -244,7 +244,7 @@ const Rsvp = () => {
                 <button className="button is-link">Submit</button>
               </div>
             </div>
-            <h2 id = "update">Need to update your RSVP? Have your response ID ready and click below! Lost your ID?</h2>
+            <h2 id = "update">Need to update your RSVP? Have your response ID ready and click below!</h2>
             <button className="button is-link" onClick={handleUpdateClick}>Update</button>
           </form>
           // Once successfully submitted, renders Thankyou component

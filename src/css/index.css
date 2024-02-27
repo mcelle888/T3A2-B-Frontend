@@ -12,6 +12,7 @@
     align-items: center;
     flex-direction: column;
     font-family: "Playfair Display", serif;
+    background-position: center;
 }
 
 h1 {
@@ -54,23 +55,3 @@ button:focus-visible {
 
 
 
-/* Tablet */
-
-@media only screen and (min-width:480px) and (max-width:899px) {
-
-  body {
-    background-position: center;
-  }
-
-}
-
-
-/* Desktop */
-
-@media only screen and (min-width:900px) {
-
-  body {
-    background-position: center;
-  }
-
- }

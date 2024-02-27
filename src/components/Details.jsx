@@ -29,7 +29,6 @@ const Details = () => {
               </ul>
             </div>
           </div>
-          {/* New bubble for gifts */}
           <div className="gifts-bubble">
             <h2 className="details-heading">Gifts</h2>
             <div className="bubble">
@@ -42,5 +41,4 @@ const Details = () => {
     </>
   )
 }
-
 export default Details
