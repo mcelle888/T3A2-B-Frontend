@@ -21,7 +21,7 @@ const Update = () => {
     e.preventDefault()
     try {
       // Fetch response data from the server based on the provided response ID
-      const response = await axios.get(`http://localhost:8001/rsvp/${responseId}`)
+      const response = await axios.get(`https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`)
       const responseData = response.data
        // If response data is found, set it to state, else send an error message
       if (responseData) {
@@ -63,7 +63,7 @@ const Update = () => {
 
     try {
       // PUT request is sent to update the response data on the server
-      await axios.put(`http://localhost:8001/rsvp/${responseId}`, responseData)
+      await axios.put(`https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`, responseData)
       console.log('Response updated successfully')
       setIsUpdated(true)
       setResponseData(null) 
