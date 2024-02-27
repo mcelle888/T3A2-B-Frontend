@@ -12,9 +12,7 @@
     align-items: center;
     flex-direction: column;
     font-family: "Playfair Display", serif;
-
 }
-
 
 h1 {
   font-size: 3.2em;
@@ -34,6 +32,7 @@ button {
   transition: border-color 0.25s;
   margin: 2rem; 
 }
+
 button:hover {
   background-color:rgb(194, 146, 137, 0.5);
   color:white; 
@@ -73,6 +72,5 @@ button:focus-visible {
   body {
     background-position: center;
   }
-
 
  }

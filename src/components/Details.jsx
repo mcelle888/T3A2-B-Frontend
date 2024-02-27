@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar'
-import MapComponent from './Map' // Import the MapComponent
+import MapComponent from './Map'  
 import '../css/Details.css'
 
 const Details = () => {

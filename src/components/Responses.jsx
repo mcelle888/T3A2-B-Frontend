@@ -2,16 +2,25 @@ import React, { useState, useEffect } from 'react'
 import NavBar from './NavBar'
 import '../css/Responses.css'
 
+
 const Responses = () => {
+  // Holds response data
   const [responses, setResponses] = useState([])
+  // Tracks when access is denied/granted
   const [accessDenied, setAccessDenied] = useState(false)
+  // Filters ceremony responses
   const [ceremonyFilter, setCeremonyFilter] = useState(null)
+  // Filters reception responses
   const [receptionFilter, setReceptionFilter] = useState(null)
 
+
+  // Fetch responses from server 
   useEffect(() => {
+    // Gets token from local storage
     const token = localStorage.getItem('token')
     if (!token) {
       console.error('Token is missing')
+      // Set accessDenied to true if token is missing
       setAccessDenied(true)
       return
     }
@@ -23,6 +32,7 @@ const Responses = () => {
       .then((response) => {
         if (!response.ok) {
           if (response.status === 403) {
+            //  Set accessDenied to true if token if unauthorised
             setAccessDenied(true)
           }
           throw new Error('Failed to fetch data from server')
@@ -30,6 +40,7 @@ const Responses = () => {
         return response.json()
       })
       .then((data) => {
+        // Sets response data
         setResponses(data)
       })
       .catch((error) => {
@@ -37,6 +48,7 @@ const Responses = () => {
       })
   }, [])
 
+    // Filter responses based on ceremony and reception options
   const filterResponses = () => {
     let filteredResponses = responses
     if (ceremonyFilter !== null) {
@@ -48,8 +60,11 @@ const Responses = () => {
     return filteredResponses
   }
 
+  // Total number of entries after filtering
   const totalEntries = filterResponses().length
 
+
+  // this component is rendered if access is denied
   if (accessDenied) {
     return (
       <>

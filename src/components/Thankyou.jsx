@@ -15,6 +15,7 @@ const ThankYou = ({ responseId }) => {
   )
 }
 
+// PropTypes ensures that the responseID prop is passed correctly
 ThankYou.propTypes = {
   responseId: PropTypes.string.isRequired,
 }
