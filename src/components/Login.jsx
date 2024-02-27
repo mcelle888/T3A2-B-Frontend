@@ -11,7 +11,7 @@ function Login() {
   const handleLogin = async () => {
     try {
       // Send pincode to server for verificatio
-      const response = await axios.post('http://localhost:8001/', { pincode })
+      const response = await axios.post('https://t3a2-b-backend-2u06.onrender.com/', { pincode })
       
       // If server response is successful, stores in local storage
       if (response.status === 200) {
