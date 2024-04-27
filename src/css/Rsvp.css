@@ -1,31 +1,40 @@
+form {
+    font-family: 'Bacasime Antique', sans-serif;
+     color: rgb(65, 63, 63);
+    border: 2px solid white;
+
+}
 #update {
     padding: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .section1 {
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.144);
     padding: 1rem; 
-    border-radius: 5px;
+    border-radius: 20px;
     margin:1rem;
 }
 
 .cr {
    margin:0;
    font-size: 1.2rem;
-   font-weight:700
+   font-weight:500
 }
 
 #heading {
     margin: 1rem;
-    color: rgb(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Bacasime Antique', sans-serif;
 }
 
-.checkbox {
+.checkbox1 {
     margin: 0.5rem;
+    display: flex;
+            justify-content: center;
 }
 
-.checkbox > input {
+.checkbox1 > input {
     margin:0.5rem; 
 }
 
@@ -40,6 +49,32 @@
     padding-bottom: 1rem;
   }
 
+  input {
+    font-family: 'Bacasime Antique', sans-serif;
+  }
+
+  .labelWhite {
+        color: white;
+    }
+
+
+    .control1 {
+        display:flex;
+        flex-direction: column;
+    }
+
+.checkboxContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.forgot {
+    display: flex;
+    text-align: center;
+    padding: 0 2rem;
+    color: white;
+}
+
 /* Tablet */
 
 @media only screen and (min-width:480px) and (max-width:899px) {
@@ -47,13 +82,53 @@
     .section1 {
         width: 80vw;
     }
-  
+
   }
 
 /* Desktop  */
 @media only screen and (min-width:900px) {
 
     .section1 {
-        width: 30vw;
+        width: 40vw;
+        padding: 1rem 8rem;
+        font-size: larger;
     }
+
+    
+
+    #heading {
+       color: rgb(65, 63, 63);
+       padding: 1rem;
+       font-size: 3.5rem;
+    }
+
+    .labelInput {
+        font-family: 'Bacasime Antique', sans-serif;
+        font-size: 1.2rem;
+        color: rgb(65, 63, 63);
+}
+
+.checkbox1{
+        width: 30rem;
+        gap: 0;
+        align-items: center;
+        text-align: center;
+
+}
+
+
+.checkbox1 {
+    width: 2rem;
+}
+
+.forgot {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+ 
 }

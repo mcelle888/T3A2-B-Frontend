@@ -110,86 +110,141 @@ const Update = () => {
     <>
       <NavBar />
       <body>
-      <div>
-        <h1>Update RSVP</h1>
-        <form className='enter' onSubmit={handleSubmit}>
-          <label>Response Number:</label>
-          <input type="text" name="responseNumber" value={responseId} onChange={handleChange} />
-          <button type="submit">Submit</button>
-        </form>
-        {error && <p id="error-message" style={{ color: 'black' }}>{error}</p>}
-        {responseData && (
-          <div>
-            <section>
-              <h2 className="ed">Edit Response</h2>
-              <form id="form-section" onSubmit={handleUpdate}>
-                <div className="field2">
-                  <label>Name (Required):</label>
-                  <div className ="inputs"> 
-                  <input type="text" name="name" value={responseData.name} onChange={handleInputChange} />
-                  {nameError && <p style={{ color: 'red' }}>{nameError}</p>}
-                  </div>
-                </div>
-                <div className="field2">
-                  <label>Number (Required):</label>
-                  <div className ="inputs"> 
-                  <input type="text" name="number" value={responseData.number} onChange={handleInputChange} />
-                  {phoneError && <p style={{ color: 'red' }}>{phoneError}</p>}
-                </div>
-                </div>
-                <div className="field2">
-                  <label>Email (Required):</label>
-                  <br></br>
-                  <input type="email" name="email" value={responseData.email} onChange={handleInputChange} />
-                  {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
-                </div>
-                  <br></br>
-                <div className="field">
-                  <label>Ceremony:</label>
-                  <input
-                    type="checkbox"
-                    name="ceremony"
-                    checked={responseData.ceremony}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="field">
-                  <label>Reception:</label>
-                  <input
-                    type="checkbox"
-                    name="reception"
-                    checked={responseData.reception}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="field2">
-                  <label>Guests:</label>
-                  <div className ="inputs"> 
-                  <input type="text" name="guests" value={responseData.guests} onChange={handleInputChange} />
-                </div>
-                </div>
-                <div className="field2">
-                  <label>Dietary:</label>
-                  <div className ="inputs"> 
-                  <input type="text" name="dietary" value={responseData.dietary} onChange={handleInputChange} />
-                </div>
-                </div>
-                <div className="field2">
-                  <label>Message:</label>
-                  <div className ="inputs"> 
-                  <textarea name="message" value={responseData.message} onChange={handleInputChange} />
-                </div>
-                </div>
-                <button type="submit">Update</button>
-              </form>
-            </section>
+        <div className="updateContainer">
+          <h1 className="updateHeading">Update RSVP</h1>
+          <form className="enter" onSubmit={handleSubmit}>
+            <label>Response Number:</label>
+            <input
+              type="text"
+              name="responseNumber"
+              value={responseId}
+              onChange={handleChange}
+            />
+            <button className="updateButton" type="submit">
+              Submit
+            </button>
+          </form>
+          <div className="forgot">
+            If you've lost your number, just fill out the RSVP form again
+            &#128522;{" "}
           </div>
-        )}
-        {isUpdated && <p id="thankyou">Thank you for updating your response &#9825;</p>}
-      </div>
+          {error && (
+            <p id="error-message" style={{ color: "black" }}>
+              {error}
+            </p>
+          )}
+          {responseData && (
+            <div>
+              <section className="updateForm">
+                <h2 className="ed">Edit Response</h2>
+                <form id="form-section" onSubmit={handleUpdate}>
+                  <div className="field2">
+                    <label>Full Name/全名 (Required):</label>
+                    <div className="inputs">
+                      <input
+                        type="text"
+                        name="name"
+                        value={responseData.name}
+                        onChange={handleInputChange}
+                      />
+                      {nameError && <p style={{ color: "red" }}>{nameError}</p>}
+                    </div>
+                  </div>
+                  <div className="field2">
+                    <label>Phone Number/电话号码 (Required):</label>
+                    <div className="inputs">
+                      <input
+                        type="text"
+                        name="number"
+                        value={responseData.number}
+                        onChange={handleInputChange}
+                      />
+                      {phoneError && (
+                        <p style={{ color: "red" }}>{phoneError}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="field2">
+                    <label>Email/电子邮件 (Required):</label>
+                    <br></br>
+                    <input
+                      type="email"
+                      name="email"
+                      value={responseData.email}
+                      onChange={handleInputChange}
+                    />
+                    {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+                  </div>
+                  <br></br>
+                  <div className="field">
+                    <label>Ceremony/仪式: </label>
+                    <input
+                      className="checkboxStyle"
+                      type="checkbox"
+                      name="ceremony"
+                      checked={responseData.ceremony}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label>Reception/婚宴</label>
+                    <input
+                      className="checkboxStyle"
+                      type="checkbox"
+                      name="reception"
+                      checked={responseData.reception}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="field2">
+                    <label>Guests/宾客: </label>
+                    <div className="inputs">
+                      <textarea
+                        type="text"
+                        rows="4"
+                        name="guests"
+                        value={responseData.guests}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field2">
+                    <label>Dietary Requirements/饮食要求: </label>
+                    <div className="inputs">
+                      <textarea
+                        type="text"
+                        rows="5"
+                        name="dietary"
+                        value={responseData.dietary}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field2">
+                    <label>Message/留言: </label>
+                    <div className="inputs">
+                      <textarea
+                        name="message"
+                        rows="6"
+                        value={responseData.message}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <button className="updateButton" type="submit">
+                    Update/更新
+                  </button>
+                </form>
+              </section>
+            </div>
+          )}
+          {isUpdated && (
+            <p id="thankyou">Thank you for updating your response &#9825;</p>
+          )}
+        </div>
       </body>
     </>
-  )
+  );
 }
 
 export default Update

@@ -1,7 +1,12 @@
 #welcome {
     margin-bottom: 2rem; 
+    font-family: 'Bacasime Antique', sans-serif;
 }
 
 #space {
     margin-top: 10rem; 
+}
+
+.pincode {
+    font-family: 'Bacasime Antique', sans-serif;
 }

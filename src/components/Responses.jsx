@@ -71,7 +71,7 @@ const Responses = () => {
         <NavBar />
         <body>
           <h1>No Access</h1>
-          <p id="warning">You do not have access to view this page.</p>
+          <p id="warning">Sorry! You do not have access to view this page :(</p>
         </body>
       </>
     )

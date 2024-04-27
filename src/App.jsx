@@ -5,7 +5,6 @@ import Rsvp from './components/Rsvp'
 import Responses from './components/Responses'
 import Welcome from './components/Welcome'
 import Details from './components/Details'
-import Aboutus from './components/AboutUs'
 import Update from './components/Update'
 
 // Main App function is defined and authentication status management. Checks if user is authenticated on render
@@ -39,12 +38,11 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/rsvp" element={<Rsvp />} />
               <Route path="/details" element={<Details />} />
-              <Route path="/aboutus" element={<Aboutus />} />
               <Route path="/responses" element={<Responses />} />
               <Route path="/update" element={<Update />} />
             </>
           ) : (
-            <Route path="*" element={<UnauthorizedError />} /> // Render UnauthorizedError component if not authenticated
+            <Route path="*" element={<UnauthorizedError />} /> 
           )}
           <Route path="*" element={<h1>404: Page not found</h1>} />
         </Routes>

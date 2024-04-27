@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it, beforeEach } from "vitest";
-import App from '../components/App';
+import App from '../App';
 import userEvent from "@testing-library/user-event";
 
 describe('App Component', () => {

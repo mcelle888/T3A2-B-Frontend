@@ -30,7 +30,7 @@ function Login() {
 
   return (
     <>
-      <label>Pincode: </label>
+      <label className='pincode'>Pincode: </label>
       <input
         type="text"
         name="pincode"
@@ -38,8 +38,8 @@ function Login() {
         onChange={(e) => setPincode(e.target.value)}
       />
       <br />
-      <button onClick={handleLogin}>Login</button>
-      {errorMessage && <p>{errorMessage}</p>}
+      <button className="rsvpButton" onClick={handleLogin}>Login</button>
+      {errorMessage && <p className='pincode'>{errorMessage}</p>}
     </>
   )
 }
