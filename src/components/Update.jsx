@@ -214,8 +214,8 @@ const Update = () => {
                       <textarea
                         type="text"
                         rows="5"
-                        name="dietary"
-                        value={responseData.dietary}
+                        name="dietry"
+                        value={responseData.dietry}
                         onChange={handleInputChange}
                       />
                     </div>
