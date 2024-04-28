@@ -1,110 +1,122 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import NavBar from './NavBar'
-import { useNavigate } from 'react-router-dom'
-import '../css/Update.css'
-
+import React, { useState } from "react";
+import axios from "axios";
+import NavBar from "./NavBar";
+import { useNavigate } from "react-router-dom";
+import "../css/Update.css";
 
 // State variables to manage the form data, response data, errors, and update status
 const Update = () => {
-  const [responseId, setResponseId] = useState('')
-  const [responseData, setResponseData] = useState(null)
-  const [error, setError] = useState('')
-  const [isUpdated, setIsUpdated] = useState(false)
-  const [nameError, setNameError] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [phoneError, setPhoneError] = useState('')
-  const navigate = useNavigate()
+  const [responseId, setResponseId] = useState('');
+  const [responseData, setResponseData] = useState(null);
+  const [error, setError] = useState('');
+  const [isUpdated, setIsUpdated] = useState(false);
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [ceremony, setCeremony] = useState(false); // Default unchecked
+  const [reception, setReception] = useState(false);
+  const navigate = useNavigate();
 
   // Function to handle form submission to fetch response data based on ID
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      // Fetch response data from the server based on the provided response ID
-      const response = await axios.get(`https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`)
-      const responseData = response.data
-       // If response data is found, set it to state, else send an error message
+      const response = await axios.get(
+        `https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`
+      );
+      const responseData = response.data;
       if (responseData) {
-        setResponseData(responseData)
-        setError('')
+        setResponseData(responseData);
+        setError('');
+        // Set ceremony and reception checkboxes based on database values
+        setCeremony(responseData.ceremony || false); // Set to false if ceremony is false in the data
+        setReception(responseData.reception || false); // Set to false if reception is false in the data
       } else {
-        setResponseData(null)
-        setError('Response not found')
+        setResponseData(null);
+        setError('Response not found');
       }
     } catch (error) {
-      console.error('Error fetching response:', error)
-      // If an error occurs during fetching, displays an error message and resets the state
-      setError('Response not found. Please try again.')
-      setResponseId('')
-      setResponseData(null)
+      console.error('Error fetching response:', error);
+      setError('Response not found. Please try again.');
+      setResponseId('');
+      setResponseData(null);
     }
-  }
+  };
 
- // Function to handle changes in the input field for the response ID
+  // Function to handle changes in the input field for the response ID
   const handleChange = (e) => {
-    setResponseId(e.target.value)
-  }
+    setResponseId(e.target.value);
+  };
 
-  
   // Function to handle changes in the input fields for response data
-  const handleInputChange = (e) => {
-      // Updates the response data based on the users input
-    const { name, value, type, checked } = e.target
-    const newValue = type === 'checkbox' ? checked : value
-    setResponseData({ ...responseData, [name]: newValue })
-  }
+ const handleInputChange = (e) => {
+   const { name, value, type, checked } = e.target;
+   const newValue = type === "checkbox" ? (checked ? "true" : "false") : value;
+   setResponseData({ ...responseData, [name]: newValue });
+   if (type === "checkbox") {
+     // Handle checkbox specifically to update its state
+     if (name === "ceremony") {
+       setCeremony(newValue === "true");  
+     } else if (name === "reception") {
+       setReception(newValue === "true");  
+     }
+   }
+ };
 
-  // Function to handle the form submission 
+  // Function to handle the form submission
   const handleUpdate = async (e) => {
     // Validates the form data before submitting the update request
-    e.preventDefault()
-    const isValid = validateForm()
-    if (!isValid) return
+    e.preventDefault();
+    const isValid = validateForm();
+    if (!isValid) return;
 
     try {
       // PUT request is sent to update the response data on the server
-      await axios.put(`https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`, responseData)
-      console.log('Response updated successfully')
-      setIsUpdated(true)
-      setResponseData(null) 
-      setResponseId('') 
+      await axios.put(
+        `https://t3a2-b-backend-2u06.onrender.com/rsvp/${responseId}`,
+        responseData
+      );
+      console.log("Response updated successfully");
+      setIsUpdated(true);
+      setResponseData(null);
+      setResponseId("");
     } catch (error) {
-      console.error('Error updating response:', error)
+      console.error("Error updating response:", error);
       if (error.response.status === 401) {
         // Redirect to welcome page if unauthorized
-        navigate('/welcome')
+        navigate("/welcome");
       }
     }
-  }
+  };
 
-   // Function to validate the form data before submission
+  // Function to validate the form data before submission
   const validateForm = () => {
-    let isValid = true
+    let isValid = true;
 
     // Name, email and number validation
     if (!responseData.name.trim()) {
-      setNameError('Name is required')
-      isValid = false
+      setNameError("Name is required");
+      isValid = false;
     } else {
-      setNameError('')
+      setNameError("");
     }
 
     if (!responseData.email.trim()) {
-      setEmailError('Email is required')
-      isValid = false
+      setEmailError("Email is required");
+      isValid = false;
     } else {
-      setEmailError('')
+      setEmailError("");
     }
 
     if (!responseData.number.trim()) {
-      setPhoneError('Phone Number is required')
-      isValid = false
+      setPhoneError("Phone Number is required");
+      isValid = false;
     } else {
-      setPhoneError('')
+      setPhoneError("");
     }
 
-    return isValid
-  }
+    return isValid;
+  };
 
   return (
     <>
@@ -182,7 +194,7 @@ const Update = () => {
                       className="checkboxStyle"
                       type="checkbox"
                       name="ceremony"
-                      checked={responseData.ceremony}
+                      checked={responseData.ceremony === "true"}
                       onChange={handleInputChange}
                     />
                   </div>
@@ -192,7 +204,7 @@ const Update = () => {
                       className="checkboxStyle"
                       type="checkbox"
                       name="reception"
-                      checked={responseData.reception}
+                      checked={responseData.reception === "true"}
                       onChange={handleInputChange}
                     />
                   </div>
@@ -245,6 +257,6 @@ const Update = () => {
       </body>
     </>
   );
-}
+};
 
-export default Update
+export default Update;
