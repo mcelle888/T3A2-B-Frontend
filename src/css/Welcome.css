@@ -1,6 +1,7 @@
 #welcome {
     margin-bottom: 2rem; 
     font-family: 'Bacasime Antique', sans-serif;
+    font-size: 3rem;
 }
 
 #space {
@@ -9,4 +10,13 @@
 
 .pincode {
     font-family: 'Bacasime Antique', sans-serif;
+    color: black;
+}
+
+
+@media only screen and (min-width:900px) {
+
+    #welcome {
+        font-size: 4.5rem;
+    }
 }
