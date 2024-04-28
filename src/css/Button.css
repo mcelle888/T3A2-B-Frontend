@@ -2,7 +2,7 @@
 .rsvpButton {
     font-family: 'Bacasime Antique', sans-serif;
     outline: none;
-    background-color: rgb(192, 165, 160);
+    background-color: rgba(143, 109, 100, 0.671);
     color: white;
     border: 2px solid white;
 }

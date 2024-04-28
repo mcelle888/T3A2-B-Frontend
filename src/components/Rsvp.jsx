@@ -173,8 +173,9 @@ const Rsvp = () => {
         <h1 id="heading">RSVP</h1>
         {!submitted ? (
           <form className="section1" onSubmit={sendResponse}>
-            <p id="date">Please complete and submit by 28th July &#128276;</p>
-            <p id="date">请在 7 月 28 日之前回复&#128276;</p>
+            <p id="date">
+              Please complete and submit by Sunday 28th July &#128276;
+            </p>
             <div className="control">
               <h2 className="cr">Ceremony/仪式</h2>
               <div className="checkboxContainer">
@@ -293,7 +294,7 @@ const Rsvp = () => {
             </div>
 
             <div className="field">
-              <label className="labelInput">Guests/宾客</label>
+              <label className="labelInput">Guests/客人</label>
               <div className="control">
                 <textarea
                   className="textarea"
@@ -330,11 +331,8 @@ const Rsvp = () => {
               Need to update your RSVP? Have your response ID ready and click
               below!
             </h2>
-            <h2 id="update">
-              需要更新您的 RSVP？请准备好您的回复 ID 并点击下方！
-            </h2>
             <button className="rsvpButton" onClick={handleUpdateClick}>
-              Update/更新
+              Update/改详细信息
             </button>
           </form>
         ) : (

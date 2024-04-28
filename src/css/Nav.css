@@ -12,6 +12,7 @@
 .navbar-logo {
   width: 150px; 
   padding: none;
+  filter: drop-shadow(0 0 0.7rem rgb(255, 255, 255));
 }
 
 .navbar-toggle {

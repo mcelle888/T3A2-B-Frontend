@@ -16,8 +16,8 @@ const Details = () => {
               <p>Date: Sunday 8th September 2024</p>
               <p>Location: Bramleigh Estate</p>
               <p>Address: 420 Ringwood-Warrandyte Rd, Warrandyte VIC 3113</p>
-              <p>Ceremony Time: 4.00pm</p>
-              <p>Reception Time: 5.30pm</p>
+              <p>Ceremony Start: 4.00pm</p>
+              <p>Reception Start: 5.30pm</p>
               <p>End Time: 10.00pm</p>
             </div>
           </div>
