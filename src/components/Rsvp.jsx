@@ -71,13 +71,13 @@ const Rsvp = () => {
       isValid = false;
     }
 
-    if (!allValues.email.trim()) {
-      errors.email = "Email is required";
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(allValues.email)) {
-      errors.email = "Invalid email address";
-      isValid = false;
-    }
+    // if (!allValues.email.trim()) {
+    //   errors.email = "Email is required";
+    //   isValid = false;
+    // } else if (!/\S+@\S+\.\S+/.test(allValues.email)) {
+    //   errors.email = "Invalid email address";
+    //   isValid = false;
+    // }
 
     if (!allValues.phone.trim()) {
       errors.phone = "Phone Number is required";
@@ -230,7 +230,9 @@ const Rsvp = () => {
             </div>
 
             <div className="field">
-              <label className="labelInput">Full Name/全名 (Required)</label>
+              <label className="labelInput">
+                Full Name/全名 (Required/必要)
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -247,23 +249,8 @@ const Rsvp = () => {
             </div>
 
             <div className="field">
-              <label className="labelInput">Email/电子邮件 (Required) </label>
-              <div className="control">
-                <input
-                  className="input"
-                  name="email"
-                  type="text"
-                  value={allValues.email}
-                  onChange={changeHandler}
-                  placeholder="Please enter your email"
-                />
-              </div>
-              {errors.email && <p className="error-handler">{errors.email}</p>}
-            </div>
-
-            <div className="field">
               <label className="labelInput">
-                Phone Number/电话号码 (Required)
+                Phone Number/电话号码 (Required/必要)
               </label>
               <div className="control">
                 <input
@@ -276,6 +263,21 @@ const Rsvp = () => {
                 />
               </div>
               {errors.phone && <p className="error-handler">{errors.phone}</p>}
+            </div>
+
+            <div className="field">
+              <label className="labelInput">Email/电子邮件 </label>
+              <div className="control">
+                <input
+                  className="input"
+                  name="email"
+                  type="text"
+                  value={allValues.email}
+                  onChange={changeHandler}
+                  placeholder="Please enter your email"
+                />
+              </div>
+              {errors.email && <p className="error-handler">{errors.email}</p>}
             </div>
 
             <div className="field">

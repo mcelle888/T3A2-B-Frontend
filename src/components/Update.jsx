@@ -101,12 +101,12 @@ const Update = () => {
       setNameError("");
     }
 
-    if (!responseData.email.trim()) {
-      setEmailError("Email is required");
-      isValid = false;
-    } else {
-      setEmailError("");
-    }
+    // if (!responseData.email.trim()) {
+    //   setEmailError("Email is required");
+    //   isValid = false;
+    // } else {
+    //   setEmailError("");
+    // }
 
     if (!responseData.number.trim()) {
       setPhoneError("Phone Number is required");
@@ -151,7 +151,7 @@ const Update = () => {
                 <h2 className="ed">Edit Response</h2>
                 <form id="form-section" onSubmit={handleUpdate}>
                   <div className="field2">
-                    <label>Full Name/全名 (Required):</label>
+                    <label>Full Name/全名 (Required/必要):</label>
                     <div className="inputs">
                       <input
                         type="text"
@@ -163,7 +163,7 @@ const Update = () => {
                     </div>
                   </div>
                   <div className="field2">
-                    <label>Phone Number/电话号码 (Required):</label>
+                    <label>Phone Number/电话号码 (Required/必要):</label>
                     <div className="inputs">
                       <input
                         type="text"
@@ -177,7 +177,7 @@ const Update = () => {
                     </div>
                   </div>
                   <div className="field2">
-                    <label>Email/电子邮件 (Required):</label>
+                    <label>Email/电子邮件:</label>
                     <br></br>
                     <input
                       type="email"

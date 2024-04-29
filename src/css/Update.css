@@ -1,5 +1,6 @@
 body {
     height: fit-content;
+    font-family: 'Bacasime Antique', sans-serif;
 }
 
 .updateHeading{
@@ -98,6 +99,9 @@ label {
         justify-content: center;
     }
 
+.forgot {
+    font-family: 'Bacasime Antique', sans-serif;
+}
 
 @media only screen and (min-width:900px) {
 
@@ -124,6 +128,13 @@ input {
 
 .ed {
     font-size: 2.5rem;
+}
+
+.forgot {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.651);
+    width: fit-content;
+    align-self: center;
 }
  
 }
