@@ -1,3 +1,7 @@
+body {
+  font-family: 'Bacasime Antique', sans-serif;
+}
+
 #warning {
   background-color: rgb(255, 255, 255, 0.6); 
   margin: 5rem; 
@@ -7,45 +11,74 @@
     margin-top: 70px; 
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
     align-content: center;
+    flex-direction: column;
+    font-family: 'Bacasime Antique', sans-serif;
+
     
+  }
+
+  .bubbleBox {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .bubbleTitle {
+    font-weight: bolder;
+  }
+ 
+
+  .left-bubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
   
   .bubble {
-
-    background-color: rgb(255, 255, 255, 0.6); 
+    background-color: rgba(255, 255, 255, 0.274); 
     border-radius: 15px;
     padding: 30px; 
-    width: 15rem; 
-    max-width: 30rem; 
-    margin: 10rem; 
+    width: 20rem; 
     box-sizing: border-box; 
     color: rgb(0, 0, 0, 0.8);
-    margin: 2rem; 
+    margin: 2rem 0;
+    border: 2px solid white;
+    display: grid;
+    flex-direction: column;
+    gap: 0.5rem;
+
+  }
+
+  .bubble > p {
+    text-align: start;
+    padding: 0.2rem;
   }
   
 
   .details-heading {
-    font-size: 2em; 
-    font-weight: bold;  
-    padding: 10px; 
-    border-radius: 10px; 
-    width: 15rem; 
-    margin-left: 2rem;
-    color: rgb(0, 0, 0, 0.4);
+    font-size: 2.5rem; 
+    color: rgb(255, 255, 255);
   }
 
-  #address {
-    background-color:white;
-    margin: 4rem; 
+  .mapContainer {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    height: 50vh;
+    align-self: center;
+
   }
 
+ 
+ 
 
   @media only screen and (min-width:480px) and (max-width:899px) {
 
     .bubble {
         width: 80vw;
+        gap: 1rem;
     }
 
     .details-heading{
@@ -53,22 +86,47 @@
       font-size: 2em;
       color: rgb(0, 0, 0, 0.5);
     }
+
   }
+
 
 
 /* Desktop  */
 @media only screen and (min-width:900px) {
 
+  .details-container{
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: -5rem;
+  }
+
     .bubble {
         width: 30vw;
-        background-color: rgb(255, 255, 255, 0.4); 
-        height: 40vh
+        background-color: rgba(255, 255, 255, 0.336); 
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .bubble > p {
+      padding: 0.5rem;
+      font-size: large;
+      text-align: start;
     }
 
     .details-heading {
       width: 26vw; 
-      font-size: 2em;
+      font-size: 3.5rem;
       color: rgb(0, 0, 0, 0.5);
 
+    }
+
+    .mapContainer {
+      width: 45rem;
+      height: 55vh;
+      margin-top: 0;
     }
 }

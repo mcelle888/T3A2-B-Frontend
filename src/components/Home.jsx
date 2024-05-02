@@ -8,17 +8,18 @@ const Home = () => {
     <>
       <NavBar />
       <body>
-        <h1 id="names"> Tim and Michelle </h1>
-        <h2>Bramleigh Estate</h2>
-        <h2> 08.09.2024 </h2>
-        <RsvpButton />
-        <div id='space'></div>
+        <div className="homeHeading">
+          <h1 id="names"> Tim and Michelle </h1>
+        </div>
+        <div className="details">
+          <h2>Bramleigh Estate</h2>
+          <h2> 08.09.2024 </h2>
+          <RsvpButton />
+          <div id="space"></div>
+        </div>
       </body>
-    
-
     </>
-
-  )
+  );
 }
 
 export default Home

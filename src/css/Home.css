@@ -8,10 +8,32 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Bacasime Antique', sans-serif;
 
 }
 
-#names {
+.homeHeading {
     margin-bottom: 1rem;
-    color: rgb(0, 0, 0, 0.6); 
+    font-family: 'Bacasime Antique', sans-serif;
+    padding: 0 1rem;
+
+    
+}
+
+.homeHeading >h1 {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.details {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+ @media only screen and (min-width:900px) {
+    #names {
+            font-size: 5rem;
+    }
+}
+h2 {
+     font-family: 'Bacasime Antique', sans-serif;
 }

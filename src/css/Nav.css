@@ -1,56 +1,99 @@
-nav > .navbar-menu{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    width: 100%;
-    background-color: rgb(194, 146, 137, 0.7);
-    height: 4rem;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  background-color: rgb(192, 165, 160);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  border-bottom: 2px solid white;
+  z-index: 2;
 }
 
-nav > .navbar-menu > .navbar-end > .navbar-item {
-    color:white; 
-}
-
-nav > .navbar-menu > .navbar-end > .navbar-item:hover {
-    background-color:rgb(255, 255, 255, 0.15); 
-}
-
-nav > .navbar-menu > .navbar-end {
-    display:flex;
-
-}
-
-.navbar {
-    position: relative;
-  }
-  
 .navbar-logo {
-    position: absolute; 
-    top: -10; 
-    left: 0; 
-    z-index: 1; 
-    height: auto;
-    width: 10rem;
-    opacity:0.8; 
-    margin-left: 0.1rem;
-  }
-
-
-  @media only screen and (min-width:0px) and (max-width:1023px) {
-
-    .navbar-logo,
-    .navbar-top {
-      display: none;
-    }
-  }
-
-
-@media only screen and (min-width:500px)  {
-
-  nav > .navbar-menu {
-  background-color: rgb(194, 146, 137, 0.7);
-  }
+  width: 150px; 
+  padding: none;
+  filter: drop-shadow(0 0 0.7rem rgb(255, 255, 255));
 }
 
-  
+.navbar-toggle {
+  display: none; 
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-right:1rem;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; 
+}
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+    z-index: 2;
+}
+
+
+.navbarItem {
+  margin-right: 1.1rem; 
+  text-decoration: none;
+  color: #ffffff;  
+  font-family: 'Bacasime Antique', sans-serif;
+}
+
+.navbarItem:hover {
+ filter: drop-shadow(0 0 0.7rem rgb(255, 255, 255));
+ color: white;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;  
+    flex-direction: column;
+    background-color:rgb(192, 165, 160);
+    position: absolute;
+    top: 60px;  
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;  
+    color: black;
+
+  }
+
+  .navbar-menu.is-active {
+    display: flex;  
+    justify-content: flex-end;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    align-items: flex-end;
+  }
+
+  .navbar-toggle {
+    display: block;  
+  }
+
+  .navbar-end {
+    background-color: rgb(192, 165, 160);
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  .navbarItem {
+    padding: 0.5rem 0;
+    margin-right: 0; 
+  }
+}

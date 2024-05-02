@@ -1,7 +1,12 @@
+body > h1 {
+  font-family: 'Bacasime Antique', sans-serif;
+}
+
 .response-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
+    font-family: 'Bacasime Antique', sans-serif;
   }
   
   .response-item {
@@ -10,11 +15,13 @@
     border-radius: 5px;
     background-color: rgb(255, 250, 250, 0.4);
     color: black;
+    font-family: 'Bacasime Antique', sans-serif;
   }
 
 
 #top {
     margin: 2rem;
+    
 }
 
 #total-entries {
@@ -29,6 +36,7 @@
 #warning {
   padding: 2rem; 
   border-radius: 5px;
+  font-family: 'Bacasime Antique', sans-serif;
 }
 
 

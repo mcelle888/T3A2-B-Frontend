@@ -13,32 +13,42 @@ const Details = () => {
           <div className="left-bubble">
             <h2 className="details-heading">When + Where</h2>
             <div className="bubble">
-              <p>Date: 08.09.2024</p>
-              <p>Time: 4.00pm</p>
-              <p>Location: Bramleigh Estate</p>
-              <p>Address: 420 Ringwood-Warrandyte Rd, Warrandyte VIC 3113</p>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Date: </p>
+                <p>Sunday 8th September 2024</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Location: </p>
+                <p>Bramleigh Estate</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Address: </p>
+                <p className="address">
+                  {" "}
+                  420 Ringwood-Warrandyte Rd, Warrandyte VIC 3113
+                </p>
+              </div>
+
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Ceremony Start: </p>
+                <p>4.00PM</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Reception Start: </p>
+                <p>5.30PM</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">End Time: </p>
+                <p>10.00PM</p>
+              </div>
             </div>
           </div>
-          <div className="right-bubble">
-            <h2 className="details-heading">Itinerary</h2>
-            <div className="bubble">
-              <ul>
-                <li>4.00pm: Ceremony</li>
-                <li>5.30pm: Reception</li>
-                <li>10.00pm: Finish</li>
-              </ul>
-            </div>
+          <div className="mapContainer">
+            <MapComponent />
           </div>
-          <div className="gifts-bubble">
-            <h2 className="details-heading">Gifts</h2>
-            <div className="bubble">
-              <p>Your presence on this day is the greatest gift of all &#10084;&#65039; If you would like to give a gift though, a wishing well will be present at the reception!</p>
-            </div>
-          </div>
-          <MapComponent />
         </div>
       </body>
     </>
-  )
+  );
 }
 export default Details

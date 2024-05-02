@@ -1,5 +1,4 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
  body {
     display: flex;
@@ -11,7 +10,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Playfair Display", serif;
     background-position: center;
 }
 
@@ -27,7 +25,6 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: "Playfair Display", serif;
   background-color: rgb(194, 146, 137, 0.8);
   cursor: pointer;
   transition: border-color 0.25s;
@@ -54,4 +51,7 @@ button:focus-visible {
 }
 
 
-
+.pincodeError {
+  color: rgb(71, 38, 38); 
+  background-color: rgba(255, 255, 255, 0.678);
+}
