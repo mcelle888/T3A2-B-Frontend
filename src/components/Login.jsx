@@ -39,7 +39,7 @@ function Login() {
       />
       <br />
       <button className="rsvpButton" onClick={handleLogin}>Login</button>
-      {errorMessage && <p className='pincode'>{errorMessage}</p>}
+      {errorMessage && <p className='pincodeError'>{errorMessage}</p>}
     </>
   )
 }

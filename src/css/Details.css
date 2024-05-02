@@ -14,8 +14,19 @@ body {
     align-content: center;
     flex-direction: column;
     font-family: 'Bacasime Antique', sans-serif;
+
     
   }
+
+  .bubbleBox {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .bubbleTitle {
+    font-weight: bolder;
+  }
+ 
 
   .left-bubble {
     display: flex;
@@ -28,11 +39,15 @@ body {
     background-color: rgba(255, 255, 255, 0.274); 
     border-radius: 15px;
     padding: 30px; 
-    width: 19rem; 
+    width: 20rem; 
     box-sizing: border-box; 
     color: rgb(0, 0, 0, 0.8);
     margin: 2rem 0;
     border: 2px solid white;
+    display: grid;
+    flex-direction: column;
+    gap: 0.5rem;
+
   }
 
   .bubble > p {
@@ -63,6 +78,7 @@ body {
 
     .bubble {
         width: 80vw;
+        gap: 1rem;
     }
 
     .details-heading{
@@ -92,6 +108,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .bubble > p {

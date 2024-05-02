@@ -13,12 +13,34 @@ const Details = () => {
           <div className="left-bubble">
             <h2 className="details-heading">When + Where</h2>
             <div className="bubble">
-              <p>Date: Sunday 8th September 2024</p>
-              <p>Location: Bramleigh Estate</p>
-              <p>Address: 420 Ringwood-Warrandyte Rd, Warrandyte VIC 3113</p>
-              <p>Ceremony Start: 4.00pm</p>
-              <p>Reception Start: 5.30pm</p>
-              <p>End Time: 10.00pm</p>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Date: </p>
+                <p>Sunday 8th September 2024</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Location: </p>
+                <p>Bramleigh Estate</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Address: </p>
+                <p className="address">
+                  {" "}
+                  420 Ringwood-Warrandyte Rd, Warrandyte VIC 3113
+                </p>
+              </div>
+
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Ceremony Start: </p>
+                <p>4.00PM</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">Reception Start: </p>
+                <p>5.30PM</p>
+              </div>
+              <div className="bubbleBox">
+                <p className="bubbleTitle">End Time: </p>
+                <p>10.00PM</p>
+              </div>
             </div>
           </div>
           <div className="mapContainer">

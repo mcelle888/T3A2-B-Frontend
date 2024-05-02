@@ -6,10 +6,11 @@ form {
 #update {
     padding: 1rem;
     color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.438);
 }
 
 .section1 {
-    background-color: rgba(255, 255, 255, 0.144);
+    background-color: rgba(255, 255, 255, 0.212);
     padding: 1rem; 
     border-radius: 20px;
     margin:1rem;
